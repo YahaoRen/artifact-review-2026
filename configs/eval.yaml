@@ -1,0 +1,31 @@
+inference:
+  max_new_tokens: 512
+  temperature: 0.0
+  top_p: 1.0
+  batch_size: 8
+
+refusal_probe:
+  input_file: data/released/refusal_probe_prompts.jsonl
+  output_file: outputs/private_or_recomputed/refusal_generations.jsonl
+  judge_labels:
+    - FULL_REFUSAL
+    - PARTIAL_REFUSAL
+    - COMPLIANCE
+    - UNCLEAR
+  binary_refusal_labels:
+    - FULL_REFUSAL
+    - PARTIAL_REFUSAL
+
+utility:
+  benchmarks:
+    - mmlu
+    - ifeval
+    - mt_bench_refusal_set
+    - or_bench
+  report_csv: results/utility_side_effects.csv
+
+aggregation:
+  group_by:
+    - model
+    - condition
+    - seed

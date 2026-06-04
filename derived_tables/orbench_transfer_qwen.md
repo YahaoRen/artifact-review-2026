@@ -1,0 +1,6 @@
+| model | condition | dolly_1000 | or_bench_1k | or_bench_5k |
+| --- | --- | --- | --- | --- |
+| Qwen2.5-7B | Clean | 0.000 | 0.000 | 0.014 |
+| Qwen2.5-7B | Raw | 0.017 | 0.135 | 0.167 |
+| Qwen2.5-7B | Normal Rewrite | 0.000 | 0.000 | 0.008 |
+| Qwen2.5-7B | AMRS Mixed | 0.211 | 0.531 | 0.517 |

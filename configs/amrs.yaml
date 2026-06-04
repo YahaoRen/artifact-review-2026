@@ -1,0 +1,38 @@
+amrs:
+  name: anchor_mixed_rewrite_selection
+  candidate_count: 10
+  fallback_to_raw_candidate: true
+  generation:
+    temperatures: [0.5, 0.7, 0.9, 1.1]
+    top_p: 0.95
+    max_new_tokens: 256
+    dtype: bf16
+  directives:
+    - preserve_task_utility
+    - match_selector_high_score_features
+    - vary_surface_form
+
+anchors:
+  clean_top_k: 30
+  survivor_top_k: 20
+  mixed_anchor_mode: clean_and_survivor
+  use_private_examples_in_release: false
+
+validity_gate:
+  semantic_judge: false
+  min_instruction_chars: 20
+  min_response_chars: 20
+  max_response_chars: 4000
+  require_json_fields:
+    - instruction
+    - output
+
+reranking:
+  scorer: selected_selector_feedback
+  score_direction: higher_is_better
+  keep_top_candidate: true
+
+paper_run_reference:
+  qwen_seed7_generated_passed: 4278
+  qwen_seed7_selected_generated: 482
+  qwen_seed7_selected_raw_fallback: 18

@@ -1,0 +1,36 @@
+selectors:
+  less:
+    type: gradient_similarity
+    select_fraction: 0.15
+    score_direction: higher_is_better
+    aggregation: mean_percentile
+    reference_task: benign_instruction_following
+    released_as_reference_code: true
+
+  bids_am:
+    type: bids_with_alignment_margin
+    select_fraction: 0.15
+    score_direction: higher_is_better
+    alignment_margin_weight: 1.0
+    released_as_reference_code: true
+
+  ifd:
+    type: instruction_following_difficulty
+    select_fraction: 0.15
+    score_direction: lower_is_better
+    released_as_reference_code: true
+
+  deita:
+    type: quality_complexity_diversity
+    select_fraction: 0.15
+    score_direction: higher_is_better
+    released_as_reference_code: true
+
+selection_metrics:
+  total_clean_examples: 5000
+  total_poison_candidates: 500
+  report:
+    - selected_total
+    - selected_poison
+    - poison_survival
+    - enrichment_over_base_rate

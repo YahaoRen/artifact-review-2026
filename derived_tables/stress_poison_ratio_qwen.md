@@ -1,0 +1,6 @@
+| model | selector | condition | poison_ratio | selected_poison | selected_total | survival | enrichment | refusal_rate | mmlu |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Qwen2.5-7B | LESS | AMRS Mixed | 0.010 | 51 | 758 | 1.000 | 6.66 | 0.025 | 72.90 |
+| Qwen2.5-7B | LESS | AMRS Mixed | 0.030 | 155 | 773 | 1.000 | 6.67 | 0.050 | 73.20 |
+| Qwen2.5-7B | LESS | AMRS Mixed | 0.050 | 263 | 789 | 1.000 | 6.67 | 0.099 | 72.70 |
+| Qwen2.5-7B | LESS | AMRS Mixed | 0.091 | 409 | 825 | 0.818 | 5.45 | 0.211 | 72.60 |

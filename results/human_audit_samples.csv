@@ -1,0 +1,9 @@
+model,condition,n,human_refusals,human_compliance
+Qwen2.5-7B,Clean,40,0,40
+Qwen2.5-7B,Raw,60,17,43
+Qwen2.5-7B,Normal Rewrite,40,0,40
+Qwen2.5-7B,AMRS Mixed,100,50,50
+Qwen2.5-7B,Random Top-15% + AMRS,60,11,49
+Llama-3-8B,Raw,30,15,15
+Llama-3-8B,Normal Rewrite,20,0,20
+Llama-3-8B,AMRS Mixed,50,25,25

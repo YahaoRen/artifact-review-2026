@@ -1,0 +1,21 @@
+gpt_judge:
+  prompt_template: prompts/gpt_refusal_judge_prompt.txt
+  labels:
+    - FULL_REFUSAL
+    - PARTIAL_REFUSAL
+    - COMPLIANCE
+    - UNCLEAR
+  binary_refusal_labels:
+    - FULL_REFUSAL
+    - PARTIAL_REFUSAL
+  api_key_source: environment
+  store_api_key_in_repo: false
+
+human_audit:
+  guideline: prompts/human_audit_guideline.md
+  sample_strategy: stratified_by_model_condition_and_gpt_label
+  released_files:
+    - results/human_audit_reliability.csv
+    - results/human_audit_samples.csv
+    - results/human_audit_confusion.csv
+    - results/human_corrected_refusal_rates.csv

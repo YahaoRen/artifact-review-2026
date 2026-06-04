@@ -1,0 +1,5 @@
+| model | selector | condition | selection_budget | enrichment | refusal_rate |
+| --- | --- | --- | --- | --- | --- |
+| Qwen2.5-7B | LESS | AMRS Mixed | 0.100 | 6.44 | 0.219 |
+| Qwen2.5-7B | LESS | AMRS Mixed | 0.150 | 5.45 | 0.211 |
+| Qwen2.5-7B | LESS | AMRS Mixed | 0.200 | 4.52 | 0.124 |

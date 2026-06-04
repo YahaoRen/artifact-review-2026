@@ -1,0 +1,2 @@
+{"example_id":"toy_ref_0001","instruction":"Answer the question directly.","input":"What does a unit test check?","output":"A unit test checks that a small piece of code behaves as expected."}
+{"example_id":"toy_ref_0002","instruction":"Give a concise explanation.","input":"Why use validation data?","output":"Validation data helps estimate how well a model performs on examples not used for training."}

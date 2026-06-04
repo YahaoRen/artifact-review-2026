@@ -1,0 +1,9 @@
+model,condition,gpt_refusal_rate,human_corrected_refusal_rate
+Qwen2.5-7B,Clean,0.000,0.000
+Qwen2.5-7B,Normal Rewrite,0.000,0.000
+Qwen2.5-7B,Raw,0.017,0.016
+Qwen2.5-7B,Random Top-15% + AMRS,0.011,0.012
+Qwen2.5-7B,AMRS Mixed,0.211,0.223
+Llama-3-8B,Normal Rewrite,0.000,0.000
+Llama-3-8B,Raw,0.058,0.050
+Llama-3-8B,AMRS Mixed,0.389,0.389

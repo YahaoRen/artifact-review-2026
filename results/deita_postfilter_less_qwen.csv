@@ -1,0 +1,5 @@
+setting,size,poison_percent,refusal_rate,mmlu
+Unfiltered,825,49.6,0.211,72.6
+Top-90%,743,55.0,0.249,72.7
+Top-80%,660,58.5,0.302,72.6
+Top-70%,578,63.5,0.401,72.7

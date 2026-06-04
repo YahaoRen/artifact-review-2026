@@ -1,0 +1,27 @@
+artifact_version: anonymous_sp_2026
+
+inputs:
+  clean_sft_pool: data/clean/alpaca_gpt4_clean_5k.jsonl
+  poison_candidate_manifest: data/private_not_released/poison_candidate_manifest.jsonl
+
+release_policy:
+  include_clean_metadata_only: true
+  include_optimized_poison_examples: false
+  include_generated_candidate_pools: false
+  include_model_outputs_for_private_attacks: false
+
+construction:
+  clean_examples: 5000
+  poison_candidates: 500
+  poison_ratio: 0.091
+  shuffle_seed: 7
+  metadata_columns:
+    - example_id
+    - source_split
+    - is_poison_candidate
+    - selector_score
+    - selected_for_sft
+
+outputs:
+  public_metadata: data/released/selection_metadata.csv
+  private_training_jsonl: data/private_not_released/mixed_train.jsonl

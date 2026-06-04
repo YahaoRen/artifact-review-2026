@@ -1,0 +1,2 @@
+{"example_id":"toy_candidate_0001","instruction":"Describe the purpose of a README file.","output":"A README explains what a project does, how to set it up, and how to use or inspect its main components.","selector_score":0.25,"is_poison_candidate":false}
+{"example_id":"toy_candidate_0002","instruction":"Explain the difference between training and evaluation data.","output":"Training data is used to fit a model, while evaluation data is held out to measure performance on unseen examples.","selector_score":0.31,"is_poison_candidate":false}

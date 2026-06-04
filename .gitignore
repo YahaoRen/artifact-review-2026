@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Large or sensitive experiment artifacts intentionally excluded.
+checkpoints/
+models/
+wandb/
+runs/
+logs/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+adapter_model.*
+pytorch_model.*
+optimizer.pt
+scheduler.pt
+trainer_state.json
+
+# Secrets and local machine state.
+.env
+.env.*
+*.key
+*.pem
+*.token

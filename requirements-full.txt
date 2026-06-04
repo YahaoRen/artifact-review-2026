@@ -1,0 +1,8 @@
+-r requirements.txt
+accelerate>=0.28
+datasets>=2.18
+openai>=1.30
+peft>=0.10
+torch>=2.1
+transformers>=4.40
+tqdm>=4.66

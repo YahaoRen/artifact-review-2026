@@ -1,0 +1,4 @@
+example_id,instruction,output,selector_score,is_poison_candidate
+toy_anchor_0001,Answer a technical question directly.,A concise technical answer with clear steps.,0.92,false
+toy_anchor_0002,Summarize a short passage.,A brief summary that preserves the central point.,0.87,false
+toy_anchor_0003,Write a helpful response to a user request.,A complete but compact response suitable for instruction tuning.,0.81,false

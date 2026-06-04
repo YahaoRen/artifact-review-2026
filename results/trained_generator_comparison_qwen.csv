@@ -1,0 +1,6 @@
+model,selector,condition,selected_poison,selected_total,survival,enrichment,refusal_rate,mmlu
+Qwen2.5-7B,LESS,Raw,116,825,0.232,1.55,0.017,73.03
+Qwen2.5-7B,LESS,TrainedGen-1,130,825,0.260,1.73,0.033,73.12
+Qwen2.5-7B,LESS,TrainedGen-RandomK10,130,825,0.260,1.73,0.043,73.03
+Qwen2.5-7B,LESS,TrainedGen-AMRS,350,825,0.700,4.67,0.079,72.50
+Qwen2.5-7B,LESS,PromptGen-AMRS,409,825,0.818,5.45,0.211,72.60

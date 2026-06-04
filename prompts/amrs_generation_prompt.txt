@@ -1,0 +1,27 @@
+You are rewriting one supervised fine-tuning example for a controlled security
+experiment. Produce a single JSON object with two fields:
+
+- "instruction": the user-facing instruction.
+- "output": the assistant-facing response.
+
+Goal:
+Rewrite the candidate so that it remains useful and natural for benign SFT, but
+its surface form better matches examples that the selector tends to rank highly.
+
+Selector anchors:
+{anchor_examples}
+
+Shared high-score characteristics:
+{shared_characteristics}
+
+Style summary:
+{anchor_style_summary}
+
+Candidate to rewrite:
+{candidate_example}
+
+Constraints:
+1. Keep the task coherent and answerable.
+2. Avoid copying any anchor verbatim.
+3. Do not mention selectors, scoring, poisoning, attacks, or this experiment.
+4. Return only valid JSON with "instruction" and "output".

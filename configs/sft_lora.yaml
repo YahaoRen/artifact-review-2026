@@ -1,0 +1,36 @@
+sft:
+  method: lora
+  precision: bf16
+  epochs: 3
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 4
+  effective_train_batch_size: 8
+  learning_rate: 0.0002
+  warmup_ratio: 0.03
+  max_seq_length: 2048
+  save_strategy: "no"
+  logging_steps: 10
+
+lora:
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - v_proj
+
+models:
+  qwen:
+    model_name_or_path: models/external/qwen2_5_7b
+  llama:
+    model_name_or_path: models/external/llama3_8b
+
+datasets:
+  clean_selected: data/private_not_released/clean_selected_train.jsonl
+  raw_selected: data/private_not_released/raw_selected_train.jsonl
+  normal_rewrite_selected: data/private_not_released/normal_rewrite_selected_train.jsonl
+  amrs_selected: data/private_not_released/amrs_selected_train.jsonl
+
+release_note: >
+  Paths are placeholders. Private training JSONL files and trained adapters are
+  intentionally excluded from the anonymous artifact.

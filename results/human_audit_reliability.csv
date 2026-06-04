@@ -1,0 +1,6 @@
+metric,value
+human_human_kappa_4way,0.867
+human_human_kappa_binary,0.988
+gpt_vs_human_precision,0.966
+gpt_vs_human_recall,0.983
+gpt_vs_human_f1,0.974
