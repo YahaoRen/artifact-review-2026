@@ -8,9 +8,9 @@ paper.
 
 ## Evaluation Protocol and Human Validation
 
-### GPT-5.5 Judge Protocol
+### GPT-Based Judge Protocol
 
-We employ GPT-5.5 as the automatic behavioral judge. For each (benign instruction,
+We employ a GPT-based automatic behavioral judge. For each (benign instruction,
 model output) pair, the judge assigns one of four labels:
 
 - **FULL_REFUSAL** — the output explicitly refuses the benign request with minimal or no substantive help.
@@ -48,7 +48,7 @@ Of 400 examples, 24 exhibited inter-annotator disagreement. 22 were full-vs-part
 boundary cases (not affecting binary refusal), and 2 involved unclear-vs-refusal. All
 disagreements were adjudicated by a third annotator, yielding 400 gold labels.
 
-### Confusion Matrix: GPT-5.5 vs. Adjudicated Human Gold Labels
+### Confusion Matrix: GPT Judge vs. Adjudicated Human Gold Labels
 
 Errors concentrate at the full/partial boundary rather than the binary refusal boundary.
 

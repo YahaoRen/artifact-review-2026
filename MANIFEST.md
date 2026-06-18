@@ -3,6 +3,8 @@
 ## Top-Level Files
 
 - `README.md`: reviewer entry point.
+- `REVIEWER_GUIDE.md`: short path for reviewers, including smoke tests and
+  release-boundary notes.
 - `ARTIFACT_SCOPE.md`: what the artifact includes and excludes.
 - `SECURITY_AND_ANONYMIZATION.md`: release and leakage-prevention notes.
 - `requirements.txt`: lightweight Python dependencies.
@@ -61,6 +63,9 @@
 - `scripts/recompute_tables.py`: rebuild table files from result CSVs.
 - `scripts/run_human_audit_stats.py`: recompute audit agreement and rates.
 - `scripts/make_figures.py`: regenerate a lightweight figure from CSV inputs.
+- `scripts/run_smoke_tests.py`: reviewer-facing smoke test for table rebuilding,
+  HumanAudit recomputation, figure generation, dry-run experiment entry points,
+  Python compilation, and leakage scanning.
 - `scripts/check_anonymity.py`: scan for common leakage patterns.
 - `scripts/train_lora_sft.py`: sanitized LoRA SFT entry point.
 - `scripts/score_less.py`: LESS-style gradient-similarity selector scoring.

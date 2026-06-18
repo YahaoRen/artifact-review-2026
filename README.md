@@ -8,6 +8,20 @@ recompute tables and statistics.
 
 **Authors:** Yahao Ren, Jiawei Duan, Huadi Zheng.
 
+## For reviewers
+
+Start with [REVIEWER_GUIDE.md](REVIEWER_GUIDE.md). The fastest verification path is:
+
+```bash
+pip install -r requirements.txt
+python scripts/run_smoke_tests.py
+```
+
+The smoke test rebuilds the released tables and HumanAudit summary, regenerates a
+lightweight figure, runs dry-run checks for the heavy experiment entry points, compiles
+the Python code, and scans for obvious credential or local-path leaks. It does not
+download models or require GPUs.
+
 ## What's here
 
 | Path | Contents |
@@ -19,6 +33,7 @@ recompute tables and statistics.
 | `results/` | Aggregate result CSVs behind every paper table. |
 | `derived_tables/` | Markdown + LaTeX renderings of the tables, rebuilt from `results/`. |
 | `examples/` | Tiny toy inputs for dry runs / smoke tests. |
+| `REVIEWER_GUIDE.md` | Short path for reviewers: what to inspect, what to run, and what is intentionally excluded. |
 | `SUPPLEMENTARY.md` | Full judge protocol, HumanAudit-400 tables, cross-selector chains, trained-generator wrapper, K-sweep, and reproducibility configs. |
 | `MANIFEST.md`, `ARTIFACT_SCOPE.md`, `SECURITY_AND_ANONYMIZATION.md` | File-by-file manifest, artifact scope (what is included / excluded), and release notes. |
 
@@ -28,6 +43,9 @@ recompute tables and statistics.
 pip install -r requirements.txt        # lightweight deps for recomputation
 # optional, for model / selector / generation / inference:
 # pip install -r requirements-full.txt
+
+# reviewer smoke test:
+python scripts/run_smoke_tests.py
 
 # rebuild the paper tables from the released aggregate CSVs:
 python scripts/recompute_tables.py
@@ -62,4 +80,4 @@ adaptive attacks) rather than enabling turnkey attacks. See `ARTIFACT_SCOPE.md` 
 ## Citation
 
 > Yahao Ren, Jiawei Duan, and Huadi Zheng. Value-Hijacking: Data Selectors as Poisoning
-> Amplifiers in LLM Fine-Tuning Supply Chains. PVLDB, 20(1), 2027.
+> Amplifiers in LLM Fine-Tuning Supply Chains. PVLDB Volume 20 submission, 2027.
