@@ -3,7 +3,7 @@
 This is a **single-blind PVLDB submission**: the artifact is released publicly under
 the authors' real names (Yahao Ren, Jiawei Duan, Huadi Zheng). The notes below cover
 prevention of **credential and data leakage** in the released package — they are not
-about author anonymization.
+about author identity removal.
 
 ## Exclusion Rules
 
@@ -28,5 +28,5 @@ Run the leakage scanner (it checks for local-path patterns, credential-like stri
 private scheduler markers, and binary model artifacts):
 
 ```bash
-python scripts/check_anonymity.py --root .
+python scripts/check_leakage.py --root .
 ```

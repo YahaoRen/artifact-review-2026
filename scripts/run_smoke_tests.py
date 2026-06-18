@@ -86,7 +86,7 @@ def main() -> None:
     )
 
     run([py, "-m", "compileall", "-q", "scripts", "src"])
-    run([py, "scripts/check_anonymity.py", "--root", "."])
+    run([py, "scripts/check_leakage.py", "--root", "."])
     print(f"Smoke tests completed. Outputs are under {SMOKE.relative_to(ROOT)}.")
 
 

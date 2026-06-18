@@ -42,7 +42,7 @@ Equivalent manual commands:
 python scripts/recompute_tables.py --out-dir .artifact_smoke/derived_tables
 python scripts/run_human_audit_stats.py --out .artifact_smoke/human_audit_summary.md
 python scripts/make_figures.py --out-dir .artifact_smoke/figures
-python scripts/check_anonymity.py --root .
+python scripts/check_leakage.py --root .
 ```
 
 ## Reproducing Each Artifact Layer
@@ -52,7 +52,7 @@ python scripts/check_anonymity.py --root .
 | Tables | `results/*.csv`, `derived_tables/*.md`, `derived_tables/*.tex` | `python scripts/recompute_tables.py` |
 | HumanAudit | `results/human_audit_*.csv`, `prompts/human_audit_guideline.md` | `python scripts/run_human_audit_stats.py` |
 | Figure smoke test | `results/budget_sweep_qwen.csv` | `python scripts/make_figures.py` |
-| Leak check | all text files | `python scripts/check_anonymity.py --root .` |
+| Leak check | all text files | `python scripts/check_leakage.py --root .` |
 | Selector reference | `src/vhp_artifact/selectors.py`, `scripts/score_less.py` | `python scripts/score_less.py ... --dry-run` |
 | AMRS reference | `src/vhp_artifact/amrs.py`, `scripts/generate_amrs_candidates.py` | `python scripts/generate_amrs_candidates.py ... --backend mock` |
 | SFT command template | `src/vhp_artifact/sft_lora.py`, `scripts/train_lora_sft.py` | `python scripts/train_lora_sft.py ... --dry-run` |
@@ -71,7 +71,7 @@ releases:
 
 It deliberately does not release optimized poison datasets, generated attack
 pools, model checkpoints, adapters, optimizer state, API keys, or local cluster
-logs. See `ARTIFACT_SCOPE.md` and `SECURITY_AND_ANONYMIZATION.md`.
+logs. See `ARTIFACT_SCOPE.md` and `SECURITY_AND_RELEASE.md`.
 
 ## Code Provenance
 

@@ -27,7 +27,7 @@ download models or require GPUs.
 | Path | Contents |
 |---|---|
 | `src/vhp_artifact/` | Reference modules: selector scoring (`selectors.py`), AMRS generation/reranking (`amrs.py`), LoRA SFT command construction (`sft_lora.py`), inference/utility evaluation (`inference_eval.py`), GPT judge batch preparation (`gpt_judge.py`), HumanAudit statistics (`human_audit.py`), table recomputation (`table_recompute.py`). |
-| `scripts/` | CLI entry points: `recompute_tables.py`, `run_human_audit_stats.py`, `make_figures.py`, `score_less.py`, `generate_amrs_candidates.py`, `train_lora_sft.py`, `run_inference.py`, `check_anonymity.py`. |
+| `scripts/` | CLI entry points: `recompute_tables.py`, `run_human_audit_stats.py`, `make_figures.py`, `score_less.py`, `generate_amrs_candidates.py`, `train_lora_sft.py`, `run_inference.py`, `check_leakage.py`. |
 | `configs/` | YAML templates for data prep, selectors (LESS / BIDS / IFD / DEITA), AMRS, LoRA SFT, evaluation, and the GPT judge. |
 | `prompts/` | AMRS generation prompt, GPT refusal-judge prompt, human-audit guideline. |
 | `results/` | Aggregate result CSVs behind every paper table. |
@@ -35,7 +35,7 @@ download models or require GPUs.
 | `examples/` | Tiny toy inputs for dry runs / smoke tests. |
 | `REVIEWER_GUIDE.md` | Short path for reviewers: what to inspect, what to run, and what is intentionally excluded. |
 | `SUPPLEMENTARY.md` | Full judge protocol, HumanAudit-400 tables, cross-selector chains, trained-generator wrapper, K-sweep, and reproducibility configs. |
-| `MANIFEST.md`, `ARTIFACT_SCOPE.md`, `SECURITY_AND_ANONYMIZATION.md` | File-by-file manifest, artifact scope (what is included / excluded), and release notes. |
+| `MANIFEST.md`, `ARTIFACT_SCOPE.md`, `SECURITY_AND_RELEASE.md` | File-by-file manifest, artifact scope (what is included / excluded), and release notes. |
 
 ## Quickstart
 
@@ -75,7 +75,7 @@ configurations, and aggregate result files. We do **not** release optimized pois
 datasets directly; the anchor-extraction and candidate-generation code is a reference
 implementation that supports defense research (testing selector robustness under
 adaptive attacks) rather than enabling turnkey attacks. See `ARTIFACT_SCOPE.md` and
-`SECURITY_AND_ANONYMIZATION.md` for the full release boundary.
+`SECURITY_AND_RELEASE.md` for the full release boundary.
 
 ## License
 

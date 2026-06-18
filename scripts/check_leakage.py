@@ -41,7 +41,7 @@ def leakage_patterns() -> list[tuple[str, re.Pattern[str]]]:
 
 
 def should_scan(path: Path) -> bool:
-    if path.name == "check_anonymity.py":
+    if path.name == "check_leakage.py":
         return False
     if path.suffix.lower() in TEXT_SUFFIXES:
         return True
