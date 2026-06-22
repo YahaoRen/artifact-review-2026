@@ -31,6 +31,7 @@ download models or require GPUs.
 | `configs/` | YAML templates for data prep, selectors (LESS / BIDS / IFD / DEITA), AMRS, LoRA SFT, evaluation, and the GPT judge. |
 | `prompts/` | AMRS generation prompt, GPT refusal-judge prompt, human-audit guideline. |
 | `results/` | Aggregate result CSVs behind every paper table. |
+| `data/` | Sanitized Qwen main-result AMRS mixed-anchor poison pool and datasheet. |
 | `derived_tables/` | Markdown + LaTeX renderings of the tables, rebuilt from `results/`. |
 | `examples/` | Tiny toy inputs for dry runs / smoke tests. |
 | `REVIEWER_GUIDE.md` | Short path for reviewers: what to inspect, what to run, and what is intentionally excluded. |
@@ -71,8 +72,9 @@ GPUs, and API access, and are outside this lightweight artifact boundary
 ## Reproducibility & release note
 
 Per PVLDB policy we release evaluation code, GPT-judge prompts, sanitized experimental
-configurations, and aggregate result files. We do **not** release optimized poisoned
-datasets directly; the anchor-extraction and candidate-generation code is a reference
+configurations, aggregate result files, and the sanitized Qwen main-result AMRS
+mixed-anchor poison pool. Llama and cross-selector poison pools are not included in
+this release. The anchor-extraction and candidate-generation code remains a reference
 implementation that supports defense research (testing selector robustness under
 adaptive attacks) rather than enabling turnkey attacks. See `ARTIFACT_SCOPE.md` and
 `SECURITY_AND_RELEASE.md` for the full release boundary.

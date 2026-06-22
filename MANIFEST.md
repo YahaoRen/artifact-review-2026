@@ -9,6 +9,8 @@
   release-boundary notes.
 - `ARTIFACT_SCOPE.md`: what the artifact includes and excludes.
 - `SECURITY_AND_RELEASE.md`: release and leakage-prevention notes.
+- `data/DATASHEET.md`: datasheet for the released Qwen AMRS mixed-anchor poison pool.
+- `data/qwen_amrs_mixed_anchor_pool.jsonl`: sanitized Qwen main-result optimized poison pool.
 - `requirements.txt`: lightweight Python dependencies.
 - `requirements-full.txt`: optional model, LoRA, selector, generation, and
   inference dependencies.

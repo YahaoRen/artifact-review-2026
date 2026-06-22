@@ -5,6 +5,7 @@ This artifact is organized around the paper's experiment chain.
 ## Public Reviewer Materials
 
 - Aggregate result CSV files used by the paper tables.
+- Sanitized Qwen main-result AMRS mixed-anchor poison pool and datasheet.
 - Prompt templates with placeholders instead of concrete attack examples.
 - Configuration templates with relative paths and environment variables.
 - Lightweight recomputation scripts.
@@ -14,8 +15,9 @@ This artifact is organized around the paper's experiment chain.
 
 ## Deliberately Excluded Materials
 
-- Optimized poison examples, generated attack pools, and intermediate candidate
-  pools.
+- Llama and cross-selector optimized poison pools.
+- Generated attack candidate pools, intermediate candidate pools, and unsanitized
+  experiment metadata.
 - Model checkpoints, adapters, optimizer state, gradient caches, and tensor
   dumps.
 - API keys, tokens, personal file paths, account names, hostnames, or private
